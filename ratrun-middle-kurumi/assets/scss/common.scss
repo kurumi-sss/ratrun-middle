@@ -1,0 +1,42 @@
+html,
+body {
+  text-size-adjust: 100%;
+}
+
+html {
+  line-height: 1.15;
+  --header-height: 0;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 1
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  li, nav ul, ol, ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
