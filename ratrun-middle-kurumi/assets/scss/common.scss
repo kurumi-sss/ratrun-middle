@@ -1,6 +1,8 @@
 html,
 body {
-  text-size-adjust: 100%;
+  // text-size-adjust: 100%;
+  width: 100%;
+  margin: 0!important;
 }
 
 html {
@@ -41,3 +43,18 @@ a {
     padding: 0;
     list-style: none;
   }
+
+  $tb:  768px;
+$tb-min:  769px;
+
+@mixin tablet {
+  @media only screen and (min-width: ($tb-min)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: ($tb)) {
+    @content;
+  }
+}
