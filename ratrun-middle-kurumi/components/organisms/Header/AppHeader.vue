@@ -1,6 +1,6 @@
 <template>
   <!-- html -->
-  <div class="header">
+  <header class="header">
     <nav class="nav">
       <ul class="nav-list">
         <li v-for="(page, key) in pageList" :key="key">
@@ -8,7 +8,7 @@
         </li>
       </ul>
     </nav>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -29,6 +29,13 @@ export default {
 
 <style lang='scss' scoped>
 // CSS
+header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 20px;
+}
+
 .nav {
   .nav-list {
     list-style: none;
