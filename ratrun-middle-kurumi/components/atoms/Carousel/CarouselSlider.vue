@@ -24,7 +24,7 @@
 <script>
 import "vue3-carousel/dist/carousel.css";
 import { ref } from "vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 
 export default {
   name: "CarouselComponent",
@@ -33,6 +33,11 @@ export default {
       type: Array,
       default: null,
     },
+  },
+  components: {
+    Carousel,
+    Slide,
+    Navigation,
   },
   setup(props) {
     const myCarousel = ref(null);
@@ -47,7 +52,7 @@ export default {
     };
 
     const clickImg = (carouselNum) => {
-      myCarousel.value.slideTo(carouselNum);
+      myCarousel.value.$refs.myCarousel.slideTo(carouselNum);
     };
 
     return {
@@ -60,11 +65,12 @@ export default {
   },
 };
 </script>
-  
-  <style lang="scss" scoped>
+
+<style lang="scss" scoped>
 img {
   height: 300px;
   width: 500px;
+  margin: 0 auto;
   @include mobile {
     width: 100%;
     height: auto;
@@ -90,7 +96,7 @@ img {
     background: #fff;
   }
   .focused-img {
-    border: 1px solid red;
+    border: 1px solid #fff;
     background: #fff;
   }
   .non-focused-img {

@@ -422,7 +422,7 @@ export default {
     const clickButton = () => {
       console.log("ボタンを押しました");
     };
-    const imageList = ref(["top.png", "phone.png"]);
+    const imageList = ref(["kitchen.png", "kitchen.png", "kitchen.png"]);
     return { clickButton, imageList };
   },
 };
